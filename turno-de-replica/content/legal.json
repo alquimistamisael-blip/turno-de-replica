@@ -25,7 +25,7 @@
       "slug": "politica-de-privacidad",
       "version": "",
       "effective_date": "",
-      "content": "[PENDIENTE: pega aquí tu Política de Privacidad. Actualmente la web no recoge datos personales de las personas visitantes de forma directa (sin formularios, cuentas ni newsletter todavía), aunque el proveedor de alojamiento (Netlify) puede registrar direcciones IP como parte de su funcionamiento técnico habitual.]"
+      "content": "[PENDIENTE: pega aquí tu Política de Privacidad. Actualmente la web no recoge datos personales de las personas visitantes de forma directa (sin formularios, cuentas ni newsletter todavía), aunque el proveedor de alojamiento puede registrar direcciones IP como parte de su funcionamiento técnico habitual.]"
     },
     {
       "active": true,
@@ -88,7 +88,7 @@
       "slug": "contenido-ia",
       "version": "",
       "effective_date": "",
-      "content": "[PENDIENTE — activar solo si se publica contenido que quede sujeto a las obligaciones de transparencia del art. 50 del Reglamento Europeo de IA (por ejemplo, imágenes o vídeos manipulados presentados como reales, o texto generado por IA sobre asuntos de interés público sin supervisión editorial humana). El modelo de contenido del CMS ya registra el origen de cada imagen (fotografía propia, con licencia, generada mediante IA, etc.) para poder activar este aviso cuando corresponda.]"
+      "content": "[PENDIENTE — activar solo si se publica contenido que quede sujeto a las obligaciones de transparencia del art. 50 del Reglamento Europeo de IA (por ejemplo, imágenes o vídeos manipulados presentados como reales, o texto generado por IA sobre asuntos de interés público sin supervisión editorial humana). El contenido editorial debe registrar el origen de cada imagen (fotografía propia, con licencia, generada mediante IA, etc.) para poder activar este aviso cuando corresponda.]"
     }
   ]
 }

@@ -27,7 +27,7 @@
     return;
   }
 
-  fetch(src, { cache: "no-store" })
+  fetch(src, { cache: "no-cache" })
     .then(function (res) {
       if (!res.ok) throw new Error("No se pudo cargar el contenido");
       return res.json();

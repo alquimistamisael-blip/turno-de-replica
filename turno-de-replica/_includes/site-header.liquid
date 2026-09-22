@@ -1,0 +1,23 @@
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+      <img src="logo-dia.png" alt="Turno de Réplica" class="site-logo" id="site-logo">
+      <p>Revista Literaria • Comunidad • Historias</p>
+    </div>
+    <div class="icons">
+      <span>🔍<span class="sr-only">Buscar</span></span><span>✉️<span class="sr-only">Mensajes</span></span><span>👤<span class="sr-only">Mi cuenta</span></span>
+      <button id="theme-toggle" aria-pressed="false" title="Cambiar a modo noche">🌙</button>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html"{% if page.fileSlug == 'index' or page.fileSlug == '' %} class="active"{% endif %}>Inicio</a><a href="la-trama-y-el-drama.html"{% if page.fileSlug == 'la-trama-y-el-drama' %} class="active"{% endif %}>Trama y Drama</a><a href="taller-de-escritura.html"{% if page.fileSlug == 'taller-de-escritura' %} class="active"{% endif %}>Taller</a><a href="museo-literario.html"{% if page.fileSlug == 'museo-literario' %} class="active"{% endif %}>Museo</a>
+    <a href="ecos-de-papel.html"{% if page.fileSlug == 'ecos-de-papel' %} class="active"{% endif %}>Club de Lectura</a><a href="la-plaza-del-marujeo.html"{% if page.fileSlug == 'la-plaza-del-marujeo' %} class="active"{% endif %}>Plaza</a><a href="ficha-de-autor.html"{% if page.fileSlug == 'ficha-de-autor' %} class="active"{% endif %}>Autores</a><a href="ficha-de-creador.html"{% if page.fileSlug == 'ficha-de-creador' %} class="active"{% endif %}>Creadores</a><a href="el-corcho.html"{% if page.fileSlug == 'el-corcho' %} class="active"{% endif %}>El Corcho</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>☰ Menú</summary>
+    <div class="mobile-menu-list">
+      <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+      <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+    </div>
+  </details>
+</header>

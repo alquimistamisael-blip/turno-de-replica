@@ -1,71 +1,14 @@
-// drama-loader.js — rellena el-drama.html con las entradas de content/trama-y-drama.json
-// que pertenezcan a una categoría de El Drama (el mismo archivo también contiene La Trama).
-(function () {
-  var JSON_PATH = 'content/trama-y-drama.json';
-
-  var CATEGORIAS_DRAMA = [
-    '☕ El Salseo Literario', '🔥 Arde BookTok', '👀 ¿Pero qué ha pasado aquí?',
-    '⚔️ Guerra de Fandoms', '💀 Opiniones que nadie pidió', '🚩 Red Flags literarias',
-    '💚 Green Flags', '🫣 Confesionario lector', '⚖️ Se abre el debate',
-    '📢 La sentencia de la semana', '🗣️ ¿Soy la única?'
-  ];
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var grid = document.getElementById('lt-grid');
-    if (!grid) return;
-
-    ctFetchJSON(JSON_PATH)
-      .then(function (data) {
-        var entries = ctPublishedSorted(data.entries).filter(function (e) {
-          return CATEGORIAS_DRAMA.indexOf(e.eyebrow) !== -1;
-        });
-        if (!entries.length) return;
-        grid.innerHTML = '';
-        entries.forEach(function (e) {
-          grid.appendChild(buildCard(e));
-        });
-      })
-      .catch(function (err) {
-        console.warn('drama-loader.js: usando contenido de respaldo,', err.message);
-      });
-  });
-
-  function buildCard(e) {
-    var a = document.createElement('a');
-    a.className = 'td-card';
-    a.href = 'drama-detalle.html?i=' + e._index;
-    a.style.textDecoration = 'none';
-    a.style.color = 'inherit';
-    a.style.display = 'block';
-
-    var img = document.createElement('div');
-    img.className = 'td-card-img';
-    if (e.image) {
-      img.style.backgroundImage = 'url(' + e.image + ')';
-      img.style.backgroundSize = 'cover';
-      img.style.backgroundPosition = 'center';
-    } else {
-      img.style.background = '#E7B8C4';
-    }
-    a.appendChild(img);
-
-    var badge = document.createElement('span');
-    badge.className = 'td-badge drama';
-    badge.textContent = e.eyebrow || '';
-    a.appendChild(badge);
-
-    var h4 = document.createElement('h4');
-    h4.textContent = e.title || '';
-    a.appendChild(h4);
-
-    var meta = document.createElement('p');
-    meta.className = 'td-meta';
-    var parts = [];
-    if (e.date) parts.push(ctFormatDate(e.date));
-    if (e.author) parts.push('Por ' + e.author);
-    meta.textContent = parts.join(' · ');
-    a.appendChild(meta);
-
-    return a;
+ctLoadSection({
+  label: 'drama-loader.js',
+  source: 'content/trama-y-drama.json',
+  gridId: 'lt-grid',
+  detailPage: 'drama-detalle.html',
+  cardClass: 'td-card',
+  imageClass: 'td-card-img',
+  imageFallback: '#E7B8C4',
+  badgeClass: 'td-badge drama',
+  filter: function (entry) { return CT_CATEGORIES.drama.indexOf(entry.eyebrow) !== -1; },
+  render: function (entry, config) {
+    return ctBuildCard(entry, config);
   }
-})();
+});

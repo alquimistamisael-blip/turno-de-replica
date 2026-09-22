@@ -62,7 +62,7 @@
     if (e.key === "Escape" && isOpen) closePanel();
   });
 
-  fetch("content/legal.json", { cache: "no-store" })
+  fetch("content/legal.json", { cache: "no-cache" })
     .then(function (res) {
       if (!res.ok) throw new Error("No se pudo cargar el listado legal");
       return res.json();

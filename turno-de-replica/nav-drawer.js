@@ -103,7 +103,7 @@
         if (!loaded && !expanded) {
           loaded = true;
           sub.innerHTML = '<li class="nav-drawer-sub-empty">Cargando...</li>';
-          fetch(section.source, { cache: "no-store" })
+          fetch(section.source, { cache: "no-cache" })
             .then(function (res) {
               if (!res.ok) throw new Error("no source");
               return res.json();

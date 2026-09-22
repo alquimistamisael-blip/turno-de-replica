@@ -1,5 +1,5 @@
 // ecos-loader.js
-// Lee content/ecos-de-papel.json (editado desde Decap) y rellena la página de Ecos de Papel.
+// Lee content/ecos-de-papel.json y rellena la página de Ecos de Papel.
 // Si algo falla (archivo no encontrado, dato vacío), la página se queda con el contenido
 // de respaldo que ya lleva escrito en el HTML — nunca se rompe ni se queda en blanco.
 

@@ -1,7 +1,7 @@
 // detalle-loader.js — script compartido por las páginas de detalle (trama, drama, museo, taller, corcho).
 // Cada página de detalle define window.CT_DETALLE = { json, type, backHref } antes de cargar este script.
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
+  ctOnReady(function () {
     var cfg = window.CT_DETALLE || {};
     if (!cfg.json) return;
 

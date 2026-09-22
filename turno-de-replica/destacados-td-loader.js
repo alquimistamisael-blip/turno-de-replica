@@ -3,13 +3,6 @@
 (function () {
   var JSON_PATH = 'content/trama-y-drama.json';
 
-  var CATEGORIAS_DRAMA = [
-    '☕ El Salseo Literario', '🔥 Arde BookTok', '👀 ¿Pero qué ha pasado aquí?',
-    '⚔️ Guerra de Fandoms', '💀 Opiniones que nadie pidió', '🚩 Red Flags literarias',
-    '💚 Green Flags', '🫣 Confesionario lector', '⚖️ Se abre el debate',
-    '📢 La sentencia de la semana', '🗣️ ¿Soy la única?'
-  ];
-
   var SLOTS = {
     'Hoy está ardiendo': 'td-slot-ardiendo',
     'Todo el mundo está hablando de...': 'td-slot-hablando',
@@ -18,7 +11,7 @@
     'El salseo de la semana': 'td-slot-salseo'
   };
 
-  document.addEventListener('DOMContentLoaded', function () {
+  ctOnReady(function () {
     if (!document.getElementById('td-slot-ardiendo')) return; // no estamos en la portada
 
     ctFetchJSON(JSON_PATH).then(function (data) {
@@ -26,7 +19,7 @@
       Object.keys(SLOTS).forEach(function (label) {
         var match = all.find(function (e) { return e.featured_banner === label; });
         if (!match) return; // sin ninguna marcada para este hueco: se deja el contenido de ejemplo
-        var esDrama = CATEGORIAS_DRAMA.indexOf(match.eyebrow) !== -1;
+        var esDrama = CT_CATEGORIES.drama.indexOf(match.eyebrow) !== -1;
         var detailPage = esDrama ? 'drama-detalle.html' : 'trama-detalle.html';
         var el = document.getElementById(SLOTS[label]);
         if (!el) return;

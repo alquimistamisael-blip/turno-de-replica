@@ -7,7 +7,7 @@
   var src = page.getAttribute("data-content-source");
   var rotations = ["rot-1", "rot-2", "rot-3", "rot-4", "rot-5"];
 
-  fetch(src, { cache: "no-store" })
+  fetch(src, { cache: "no-cache" })
     .then(function (res) {
       if (!res.ok) throw new Error("No se pudo cargar el contenido");
       return res.json();
