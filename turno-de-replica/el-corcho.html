@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>El Corcho — Turno de Réplica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home-estilos.css">
+<link rel="stylesheet" href="cookies-estilos.css">
+<link rel="stylesheet" href="trama-drama-estilos.css">
+<link rel="stylesheet" href="taller-estilos.css">
+<style>
+  :root{ --corcho-color:#9C6F3D; }
+  .ec-hero-simple{max-width:1600px;margin:0 auto;padding:48px 32px 0;position:relative;}
+  .ec-hero-simple h1{font-size:44px;margin:0 0 10px;}
+  .ec-hero-simple p{color:var(--ink-soft);max-width:520px;line-height:1.6;margin:0 0 24px;}
+  .corcho-disclaimer{max-width:1600px;margin:0 auto;padding:0 32px;}
+  .corcho-disclaimer p{background:var(--card-alt);border-radius:8px;padding:12px 18px;font-size:13px;color:var(--ink-soft);}
+  .corcho-filtros{max-width:1600px;margin:24px auto 0;padding:0 32px;display:flex;flex-wrap:wrap;gap:10px;}
+  .corcho-filtro{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:13px;cursor:pointer;}
+  .corcho-filtro.active{background:var(--corcho-color);color:#fff;border-color:var(--corcho-color);}
+  .corcho-grid{max-width:1600px;margin:24px auto 0;padding:0 32px 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:900px){ .corcho-grid{grid-template-columns:1fr;} }
+  .corcho-card{background:var(--card);border-radius:12px;padding:22px;position:relative;}
+  .corcho-card::before{content:"📌";position:absolute;top:-12px;left:20px;font-size:20px;}
+  .corcho-tag{display:inline-block;background:var(--corcho-color);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:4px 10px;border-radius:4px;margin-bottom:10px;}
+  .corcho-card h3{font-size:17px;margin:0 0 8px;font-family:'Cormorant',serif;}
+  .corcho-card p{font-size:14px;color:var(--ink-soft);line-height:1.5;margin:0 0 14px;}
+  .corcho-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-mute);border-top:1px solid var(--line);padding-top:10px;}
+  .corcho-nueva{max-width:1600px;margin:0 auto 48px;padding:0 32px;text-align:center;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+    <img src="logo-dia.png" alt="Turno de Réplica" class="site-logo" id="site-logo">
+    <p>Revista Literaria • Comunidad • Historias</p>
+  </div>
+    <div class="icons">
+    <span>🔍<span class="sr-only">Buscar</span></span><span>✉️<span class="sr-only">Mensajes</span></span><span>👤<span class="sr-only">Mi cuenta</span></span>
+    <button id="theme-toggle" aria-pressed="false" title="Cambiar a modo noche">🌙</button>
+  </div>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+    <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html" class="active">El Corcho</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>☰ Menú</summary>
+    <div class="mobile-menu-list">
+      <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+      <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+    </div>
+  </details>
+</header>
+
+<div class="corcho-disclaimer">
+  <p>🚧 Vista de diseño — la publicación real de anuncios llegará con Decap CMS. Los anuncios que ves aquí son de ejemplo.</p>
+</div>
+
+<section class="ec-hero-simple">
+  <h1 class="heading">📌 El Corcho</h1>
+  <p class="body-serif">El tablón de anuncios de la comunidad: busca compañera de escritura, ofrece intercambios, lanza sorteos o encuentra colaboraciones.</p>
+</section>
+
+<style>
+  .corcho-cat-nav{max-width:1600px;margin:32px auto 0;padding:0 32px;display:flex;gap:14px;flex-wrap:wrap;}
+  .corcho-cat-pill{position:relative;flex:1;min-width:140px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 10px 14px;border-radius:4px;color:#fff;text-decoration:none;text-align:center;font-family:'Cormorant',serif;font-size:14px;font-weight:600;transition:.15s;box-shadow:0 6px 14px rgba(0,0,0,.12);}
+  .corcho-cat-pill:hover{transform:translateY(-3px);}
+  .corcho-cat-pill .cc-icon{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .corcho-cat-pill .cc-tape{position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-3deg);width:40px;height:14px;background:var(--highlight);opacity:.85;}
+  .corcho-cat-pill.c1{background:var(--secondary);}
+  .corcho-cat-pill.c2{background:var(--accent);}
+  .corcho-cat-pill.c3{background:var(--plaza-text);}
+  .corcho-cat-pill.c4{background:var(--taller-text);}
+  .corcho-cat-pill.c5{background:var(--ecos-text);}
+  @media (max-width:900px){ .corcho-cat-nav{padding:0 16px;} .corcho-cat-pill{min-width:110px;font-size:12px;} }
+</style>
+
+<nav class="corcho-cat-nav">
+  <a href="el-corcho-anuncio.html" class="corcho-cat-pill c1"><span class="cc-tape"></span><span class="cc-icon">✉️</span>Pen Pals</a>
+  <a href="#" class="corcho-cat-pill c2"><span class="cc-tape" style="background:var(--interaction);"></span><span class="cc-icon">📖</span>Lectores Beta / Autores</a>
+  <a href="#" class="corcho-cat-pill c3"><span class="cc-tape" style="background:var(--marker);"></span><span class="cc-icon">🔍</span>Búsqueda de Clichés</a>
+  <a href="#" class="corcho-cat-pill c4"><span class="cc-tape" style="background:var(--accent);"></span><span class="cc-icon">🤝</span>Colaboraciones</a>
+  <a href="#" class="corcho-cat-pill c5"><span class="cc-tape" style="background:var(--secondary);"></span><span class="cc-icon">🎁</span>Sorteos y Concursos</a>
+</nav>
+
+<div class="corcho-grid" id="corcho-grid">
+  <a class="corcho-card" href="el-corcho-anuncio.html" style="text-decoration:none;color:inherit;display:block;">
+    <span class="corcho-tag">Pen Pals</span>
+    <h3>Busco compañera de escritura para intercambiar capítulos</h3>
+    <p>Escribo fantasía romántica, busco alguien con quien comentar avances cada semana y darnos ánimos mutuos.</p>
+    <div class="corcho-meta"><span>@Lunaescribe</span><span>Hace 2 días</span></div>
+  </a>
+  <article class="corcho-card">
+    <span class="corcho-tag">Lectores Beta / Autores</span>
+    <h3>Busco lectoras beta para novela de 90k palabras</h3>
+    <p>Dark romance con spice moderado. Necesito feedback sobre ritmo y consistencia de personajes antes de enviarla a editoriales.</p>
+    <div class="corcho-meta"><span>@EscritoraDeMadrugada</span><span>Hace 4 días</span></div>
+  </article>
+  <article class="corcho-card">
+    <span class="corcho-tag">Búsqueda de Clichés</span>
+    <h3>¿Alguien recuerda un libro con este cliché tan concreto?</h3>
+    <p>Enemies to lovers, ella es escritora fantasma de él, ambientada en un crucero. ¡Llevo semanas buscándolo!</p>
+    <div class="corcho-meta"><span>@CazadoraDeTramas</span><span>Hace 5 días</span></div>
+  </article>
+  <article class="corcho-card">
+    <span class="corcho-tag">Colaboraciones</span>
+    <h3>BookToker busca autoras para reseñar en formato reel</h3>
+    <p>Hago contenido de fantasía y romantasy en TikTok, busco autoras independientes para colaboración sin coste.</p>
+    <div class="corcho-meta"><span>@EntreLibrosyCafé</span><span>Hace 1 semana</span></div>
+  </article>
+  <article class="corcho-card">
+    <span class="corcho-tag">Sorteos y Concursos</span>
+    <h3>Sorteo de 3 ejemplares firmados por San Jordi</h3>
+    <p>Para celebrar el lanzamiento, sorteamos 3 copias físicas dedicadas entre quienes comenten su libro favorito del año.</p>
+    <div class="corcho-meta"><span>@NikaR_autora</span><span>Hace 1 semana</span></div>
+  </article>
+  <article class="corcho-card">
+    <span class="corcho-tag">Pen Pals</span>
+    <h3>Grupo de escritura los domingos por Discord</h3>
+    <p>Nos juntamos a escribir en silencio 1h y luego comentamos avances. Ambiente tranquilo, sin presión ni juicios.</p>
+    <div class="corcho-meta"><span>@PlumasDeMedianoche</span><span>Hace 2 semanas</span></div>
+  </article>
+</div>
+
+<div class="corcho-nueva">
+  <button class="btn-primary" style="background:var(--corcho-color);">+ PUBLICAR UN ANUNCIO →</button>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="sobre-turno-de-replica.html">Sobre Turno de Réplica</a><a href="#">Colaboraciones</a><a href="#">Contacto</a>
+    <a href="aviso-legal.html">Aviso Legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="terminos.html">Términos</a>
+    <a href="#" id="footer-cookie-settings">Configurar cookies</a>
+  </div>
+  <div class="footer-social">
+    <span>♛</span><span>TikTok</span><span>Discord</span><span>✉️</span><span>★</span>
+  </div>
+  <p class="footer-copy">© 2026 Turno de Réplica. Todos los derechos reservados.</p>
+</footer>
+
+<script src="home-tema.js"></script>
+<script src="cookie-consent.js"></script>
+<script src="content-common.js"></script>
+<script src="corcho-loader.js"></script>
+</body>
+</html>

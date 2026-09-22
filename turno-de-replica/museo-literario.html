@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Museo Literario — Turno de Réplica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home-estilos.css">
+<link rel="stylesheet" href="cookies-estilos.css">
+<link rel="stylesheet" href="trama-drama-estilos.css">
+<link rel="stylesheet" href="taller-estilos.css">
+<link rel="stylesheet" href="museo-estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+    <img src="logo-dia.png" alt="Turno de Réplica" class="site-logo" id="site-logo">
+    <p>Revista Literaria • Comunidad • Historias</p>
+  </div>
+    <div class="icons">
+    <span>🔍<span class="sr-only">Buscar</span></span><span>✉️<span class="sr-only">Mensajes</span></span><span>👤<span class="sr-only">Mi cuenta</span></span>
+    <button id="theme-toggle" aria-pressed="false" title="Cambiar a modo noche">🌙</button>
+  </div>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html" class="active">Museo</a>
+    <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>☰ Menú</summary>
+    <div class="mobile-menu-list">
+      <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+      <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+    </div>
+  </details>
+</header>
+
+<section class="ml-hero" style="position:relative;">
+  <svg width="22" height="22" viewBox="0 0 40 40" style="position:absolute;top:-8px;left:8%;transform:rotate(-10deg);pointer-events:none;z-index:2;"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--marker)"/></svg>
+  <svg width="16" height="16" viewBox="0 0 40 40" style="position:absolute;top:2%;left:46%;transform:rotate(15deg);pointer-events:none;z-index:2;"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--accent)"/></svg>
+  <div class="ml-hero-text">
+    <h1 class="heading ml-title">MUSEO<br><span class="ml-italic">Literario</span></h1>
+    <p class="body-serif">Un paseo por la historia de la literatura, sus grandes voces, objetos que cuentan historias y curiosidades que nos conectan con el pasado para entender el presente.</p>
+  </div>
+  <div class="ml-hero-img" style="position:relative;">
+    <div class="washi-tape" style="top:-10px;right:20px;left:auto;transform:rotate(7deg);background:var(--interaction);"></div>
+  </div>
+  <div class="ml-quote">
+    <p>"Los libros son espejos: solo ves en ellos lo que ya llevas dentro."</p>
+    <span>— Carlos Ruiz Zafón</span>
+  </div>
+</section>
+
+<style>
+  .ml-cat-nav{max-width:1600px;margin:32px auto 0;padding:0 32px;display:flex;gap:14px;flex-wrap:wrap;}
+  .ml-cat-pill{position:relative;flex:1;min-width:150px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 12px 16px;border-radius:4px;color:#fff;text-decoration:none;text-align:center;font-family:'Cormorant',serif;font-size:15px;font-weight:600;transition:.15s;box-shadow:0 6px 14px rgba(0,0,0,.12);}
+  .ml-cat-pill:hover{transform:translateY(-3px);}
+  .ml-cat-pill .ml-cat-icon{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .ml-cat-pill .ml-cat-tape{position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-3deg);width:44px;height:16px;background:var(--highlight);opacity:.85;}
+  .ml-cat-pill.pieza{background:var(--secondary);}
+  .ml-cat-pill.datazo{background:var(--accent);}
+  .ml-cat-pill.vidas{background:var(--plaza-text);}
+  .ml-cat-pill.viajero{background:var(--taller-text);}
+  @media (max-width:900px){ .ml-cat-nav{padding:0 16px;} .ml-cat-pill{min-width:120px;font-size:13px;} }
+</style>
+
+<nav class="ml-cat-nav">
+  <a href="museo-literario-articulo.html" class="ml-cat-pill pieza"><span class="ml-cat-tape"></span><span class="ml-cat-icon">📌</span>Pieza del mes</a>
+  <a href="#" class="ml-cat-pill datazo"><span class="ml-cat-tape" style="background:var(--interaction);"></span><span class="ml-cat-icon">🔥</span>El Datazo</a>
+  <a href="#" class="ml-cat-pill vidas"><span class="ml-cat-tape" style="background:var(--marker);"></span><span class="ml-cat-icon">🧭</span>Redescubriendo Vidas</a>
+  <a href="#" class="ml-cat-pill viajero"><span class="ml-cat-tape" style="background:var(--accent);"></span><span class="ml-cat-icon">🕰️</span>El Viajero</a>
+</nav>
+
+<section class="ml-layout">
+  <div class="ml-main">
+
+    <div class="tl-section-head"><span class="eyebrow">✦ Destacado del mes</span></div>
+    <a class="ml-featured" href="museo-literario-articulo.html">
+      <div class="ml-featured-img"></div>
+      <div class="ml-featured-body">
+        <span class="td-badge trama">Pieza del mes</span>
+        <h3 class="heading">La carta que cambió la historia</h3>
+        <p>Descubre la carta que Herman Melville envió a su editor y que marcó el destino de Moby Dick.</p>
+        <p class="td-meta">Hace 2 días · 7 min de lectura</p>
+        <span class="btn-primary" style="display:inline-block;margin-top:6px;">LEER MÁS →</span>
+      </div>
+    </a>
+
+    <div class="tl-section-head"><span class="eyebrow">✦ Lo último en el Museo</span><a href="#" class="ver-todo">VER TODO →</a></div>
+    <div class="ml-recientes" id="ml-recientes">
+      <article class="tl-card"><div class="tl-card-img"></div>
+        <span class="td-badge trama">Redescubriendo Vidas</span>
+        <h4>Orgullo y prejuicio, de Jane Austen</h4>
+        <p class="tl-desc">Una mirada fresca a la obra que siguen amando generaciones.</p>
+        <p class="td-meta">Ayer · 9 min de lectura</p>
+      </article>
+      <article class="tl-card"><div class="tl-card-img"></div>
+        <span class="td-badge trama">El Datazo</span>
+        <h4>¿Sabías que C.S. Lewis escribió más de 30 libros?</h4>
+        <p class="tl-desc">Mucho más que Narnia: su legado va mucho más allá.</p>
+        <p class="td-meta">Hace 3 días · 6 min de lectura</p>
+      </article>
+      <article class="tl-card"><div class="tl-card-img"></div>
+        <span class="td-badge trama">El Viajero</span>
+        <h4>El reloj de bolsillo de Virginia Woolf</h4>
+        <p class="tl-desc">Un objeto íntimo que la acompañó en sus últimos años.</p>
+        <p class="td-meta">Hace 5 días · 8 min de lectura</p>
+      </article>
+      <article class="tl-card"><div class="tl-card-img"></div>
+        <span class="td-badge trama">El Viajero</span>
+        <h4>El castillo que inspiró Drácula</h4>
+        <p class="tl-desc">La historia real detrás del mito de Bram Stoker.</p>
+        <p class="td-meta">Hace 6 días · 7 min de lectura</p>
+      </article>
+      <article class="tl-card"><div class="tl-card-img"></div>
+        <span class="td-badge trama">Redescubriendo Vidas</span>
+        <h4>Cien años de soledad, de Gabriel García Márquez</h4>
+        <p class="tl-desc">Magia, soledad y realismo en su obra maestra.</p>
+        <p class="td-meta">Hace 1 semana · 10 min de lectura</p>
+      </article>
+    </div>
+  </div>
+
+  <aside class="tl-sidebar">
+    <div class="tl-side-card">
+      <h4 class="heading">✦ Explora el Museo</h4>
+      <ul class="ml-categorias">
+        <li>📌<div><strong>Pieza del mes</strong><span>El tesoro destacado de nuestro museo</span></div></li>
+        <li>🔥<div><strong>El Datazo</strong><span>El chisme literario con humor</span></div></li>
+        <li>🧭<div><strong>Redescubriendo Vidas</strong><span>Autoras y autores olvidados o curiosos</span></div></li>
+        <li>🕰️<div><strong>El Viajero</strong><span>Cápsulas de viaje en el tiempo</span></div></li>
+      </ul>
+      <a href="#" class="btn-primary" style="display:block;text-align:center;">VER TODAS LAS CATEGORÍAS →</a>
+    </div>
+
+    <div class="tl-side-card">
+      <h4 class="heading">No te pierdas nada</h4>
+      <p class="body-serif" style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;">Recibe cada mes historias, curiosidades y tesoros literarios en tu correo.</p>
+      <form onsubmit="return false;" style="display:flex;flex-direction:column;gap:10px;">
+        <label for="newsletter-email-museo" class="sr-only">Tu correo aquí</label>
+        <input id="newsletter-email-museo" type="email" placeholder="Tu correo aquí..." class="tl-search" style="margin-bottom:0;">
+        <button class="btn-primary">Suscribirme</button>
+      </form>
+    </div>
+  </aside>
+</section>
+
+<section class="ml-trivia">
+  <div class="ml-trivia-head">
+    <h4 class="heading">¿Sabías que...?</h4>
+  </div>
+  <div class="ml-trivia-items">
+    <div class="ml-trivia-item"><span>🪶</span><p>Shakespeare inventó más de 1.700 palabras en inglés.</p></div>
+    <div class="ml-trivia-item"><span>👤</span><p>Jane Austen nunca publicó bajo su propio nombre.</p></div>
+    <div class="ml-trivia-item"><span>🌬️</span><p>El Quijote fue el primer best seller de la historia.</p></div>
+    <div class="ml-trivia-item"><span>📗</span><p>Mary Shelley escribió Frankenstein con 18 años.</p></div>
+  </div>
+  <a href="#" class="btn-primary ml-trivia-btn">VER MÁS CURIOSIDADES →</a>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="sobre-turno-de-replica.html">Sobre Turno de Réplica</a><a href="#">Colaboraciones</a><a href="#">Contacto</a>
+    <a href="aviso-legal.html">Aviso Legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="terminos.html">Términos</a>
+    <a href="#" id="footer-cookie-settings">Configurar cookies</a>
+  </div>
+  <div class="footer-social">
+    <span>♛</span><span>TikTok</span><span>Discord</span><span>✉️</span><span>★</span>
+  </div>
+  <p class="footer-copy">© 2026 Turno de Réplica. Todos los derechos reservados.</p>
+</footer>
+
+<script src="home-tema.js"></script>
+<script src="cookie-consent.js"></script>
+<script src="content-common.js"></script>
+<script src="museo-loader.js"></script>
+</body>
+</html>

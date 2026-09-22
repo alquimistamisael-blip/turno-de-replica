@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Ecos de Papel — Turno de Réplica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home-estilos.css">
+<link rel="stylesheet" href="cookies-estilos.css">
+<link rel="stylesheet" href="trama-drama-estilos.css">
+<link rel="stylesheet" href="taller-estilos.css">
+<link rel="stylesheet" href="ecos-estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+    <img src="logo-dia.png" alt="Turno de Réplica" class="site-logo" id="site-logo">
+    <p>Revista Literaria • Comunidad • Historias</p>
+  </div>
+    <div class="icons">
+    <span>🔍<span class="sr-only">Buscar</span></span><span>✉️<span class="sr-only">Mensajes</span></span><span>👤<span class="sr-only">Mi cuenta</span></span>
+    <button id="theme-toggle" aria-pressed="false" title="Cambiar a modo noche">🌙</button>
+  </div>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+    <a href="ecos-de-papel.html" class="active">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>☰ Menú</summary>
+    <div class="mobile-menu-list">
+      <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+      <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+    </div>
+  </details>
+</header>
+
+<section class="ec-hero" style="position:relative;">
+  <svg width="22" height="22" viewBox="0 0 40 40" style="position:absolute;top:-8px;right:10%;transform:rotate(-14deg);pointer-events:none;z-index:2;"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--ecos-text)"/></svg>
+  <svg width="16" height="16" viewBox="0 0 40 40" style="position:absolute;top:6%;right:38%;transform:rotate(10deg);pointer-events:none;z-index:2;"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--interaction)"/></svg>
+  <div class="ec-hero-img" style="position:relative;">
+    <div class="washi-tape" style="top:-10px;left:16px;transform:rotate(-6deg);background:var(--interaction);"></div>
+  </div>
+  <div class="ec-hero-text">
+    <h1 class="heading ec-title">ECOS DE<br>PAPEL</h1>
+    <p class="ec-tagline">Un libro. Muchas voces.<br>Una historia compartida.</p>
+    <p class="body-serif">Nuestro club de lectura en Discord donde los libros se viven, se debaten y se disfrutan sin filtros.</p>
+  </div>
+</section>
+
+<section class="ec-layout">
+  <div class="ec-reading">
+    <span class="eyebrow">☆ Ahora estamos leyendo</span>
+    <div class="ec-reading-body">
+      <div class="ec-book-cover" id="ec-book-cover">EL BOSQUE<br>DE LOS<br>RECUERDOS<span>Alicia Navarro</span></div>
+      <div class="ec-reading-info">
+        <h3 class="heading" id="ec-book-title">El bosque de los recuerdos</h3>
+        <p class="ec-author" id="ec-book-author">de Alicia Navarro</p>
+        <p class="ec-desc" id="ec-author-bio" style="display:none;"></p>
+        <div class="ec-tags" id="ec-book-tags">
+          <span>Fantasía</span><span>Misterio</span><span>Romance</span>
+        </div>
+        <p class="ec-desc" id="ec-book-synopsis">Una carta antigua. Un bosque que no existe en los mapas. Y recuerdos que alguien ha intentado enterrar.</p>
+        <p class="ec-progress-label">¿En qué punto vamos? <strong id="ec-progress-percent">80%</strong></p>
+        <div class="ec-progress-bar"><div class="ec-progress-fill" id="ec-progress-fill" style="width:80%;"></div></div>
+        <p class="td-meta" id="ec-current-chapters">Esta semana: capítulos 41 al 50</p>
+        <p class="ec-spoiler-warn" id="ec-spoiler-warn">⚠️ Spoilers hasta el capítulo 40</p>
+        <a href="#" id="ec-book-link" class="btn-primary" style="display:inline-block;">VER FICHA DEL LIBRO →</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="ec-calendario">
+    <span class="eyebrow">📅 Calendario de lectura →</span>
+    <ul class="ec-calendario-list" id="ec-calendario-list">
+      <li><span class="ec-cal-icon">📖</span><div><strong>Semana 1</strong><span>Capítulos 1 al 10</span></div><em>2–8 AGO</em><span class="ec-check">✓</span></li>
+      <li><span class="ec-cal-icon">📗</span><div><strong>Semana 2</strong><span>Capítulos 11 al 20</span></div><em>9–15 AGO</em><span class="ec-check">✓</span></li>
+      <li><span class="ec-cal-icon">📘</span><div><strong>Semana 3</strong><span>Capítulos 21 al 30</span></div><em>16–22 AGO</em><span class="ec-check">✓</span></li>
+      <li><span class="ec-cal-icon">☕</span><div><strong>Semana 4</strong><span>Capítulos 31 al 41</span></div><em>23–29 AGO</em><span class="ec-check pending">○</span></li>
+      <li><span class="ec-cal-icon">🎙️</span><div><strong>Cierre y charla en directo</strong><span>Llamada de voz en Discord</span></div><em>30 AGO</em></li>
+    </ul>
+  </aside>
+</section>
+
+<section class="ec-tres-col">
+  <div class="ec-quotes">
+    <span class="eyebrow">💬 Esta semana en Ecos...</span>
+    <div class="ec-quote-list">
+      <div class="ec-quote">☕<p>«Necesito hablar de ese final porque NO ESTOY BIEN.»</p><span>— @LectoraNocturna</span></div>
+      <div class="ec-quote">🧚<p>«Yo sabía desde el capítulo 3 que ese personaje escondía algo.»</p><span>— @CazadoraDePistas</span></div>
+      <div class="ec-quote">📚<p>«¿Podemos hablar de la tensión entre ellos? Porque yo ya no puedo más.»</p><span>— @TeamEnemigosLovers</span></div>
+    </div>
+    <a href="#" id="ec-discord-link" class="ver-todo">ÚNETE EN DISCORD Y SIGUE LA CONVERSACIÓN →</a>
+  </div>
+
+  <div class="ec-como">
+    <span class="eyebrow">🧚 ¿Cómo funciona?</span>
+    <div class="ec-pasos">
+      <div class="ec-paso"><span class="ec-num">1</span><div><h4>Elige la lectura</h4><p>Descubre el libro del mes y consigue tu ejemplar.</p></div></div>
+      <div class="ec-paso"><span class="ec-num">2</span><div><h4>Lee a tu ritmo</h4><p>Sigue el calendario o avanza libremente.</p></div></div>
+      <div class="ec-paso"><span class="ec-num">3</span><div><h4>Entra a Discord</h4><p>Únete a nuestro servidor gratuito con un clic.</p></div></div>
+      <div class="ec-paso"><span class="ec-num">4</span><div><h4>Habla, debate y marujea</h4><p>Comenta, comparte teorías y disfruta con la comunidad.</p></div></div>
+    </div>
+  </div>
+
+  <div class="ec-normas">
+    <span class="eyebrow">🩶 Nuestras normas básicas</span>
+    <ul class="ec-normas-list">
+      <li>Este es un espacio seguro y amable.</li>
+      <li>Avisamos de spoilers siempre.</li>
+      <li>Respeto ante todo, siempre.</li>
+      <li>Cada opinión cuenta.</li>
+      <li>Lo importante: disfrutar del drama y del café.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="ec-cta-banner">
+  <div class="ec-cta-text">
+    <p class="ec-cta-line">El libro termina.<br>La conversación no.</p>
+    <a href="ecos-sala.html" class="btn-primary ec-cta-btn" style="background:var(--secondary);display:inline-block;">🎙️ ENTRA A LA SALA DE VOZ →</a>
+    <p class="ec-cta-stats">🟢 128 lectores online &nbsp;·&nbsp; ⚪ 487 miembros en total</p>
+  </div>
+  <div class="ec-cta-note">Aquí compartimos teorías, lloros, risas y muchos spoilers. ♡</div>
+</section>
+
+<section class="ec-spoiler-zone">
+  <h4 class="heading">¿Ya lo has terminado?</h4>
+  <p>Entra bajo tu propia responsabilidad. Aquí hablamos SIN FILTROS.</p>
+  <a href="#" class="btn-primary">🔥 ABRIR EL RINCÓN DEL SPOILER →</a>
+  <p class="ec-spoiler-sub">Solo para lectores al día</p>
+</section>
+
+<section class="ec-biblioteca">
+  <div class="tl-section-head">
+    <span class="eyebrow">🏛️ Nuestra Biblioteca de Ecos</span>
+  </div>
+  <p class="ec-biblio-sub">Todas las lecturas que hemos compartido</p>
+  <div class="ec-filtros">
+    <button class="ec-filtro active">2026</button>
+    <button class="ec-filtro">2025</button>
+    <button class="ec-filtro">Todas</button>
+    <select class="ec-filtro-select"><option>Todos los géneros</option><option>Romance</option><option>Fantasía</option><option>Thriller</option><option>Histórica</option></select>
+  </div>
+  <div class="ec-biblio-grid" id="ec-biblio-grid">
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#C9A6D8;"></div><span class="ec-mes">Julio 2026</span><h4>Una corte de niebla y furia</h4><p>Sarah J. Maas</p><span class="td-badge trama">Fantasía</span></div>
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#1E2A3A;"></div><span class="ec-mes">Junio 2026</span><h4>La asistente</h4><p>Freida McFadden</p><span class="td-badge drama">Thriller</span></div>
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#2E2A28;"></div><span class="ec-mes">Mayo 2026</span><h4>Powerless</h4><p>Lauren Roberts</p><span class="td-badge trama">Fantasía</span></div>
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#8FA898;"></div><span class="ec-mes">Abril 2026</span><h4>Verity</h4><p>Colleen Hoover</p><span class="td-badge">Romance</span></div>
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#B23A48;"></div><span class="ec-mes">Marzo 2026</span><h4>El príncipe cruel</h4><p>Holly Black</p><span class="td-badge trama">Fantasía</span></div>
+    <div class="ec-biblio-item"><div class="ec-mini-cover" style="background:#3A2E33;"></div><span class="ec-mes">Febrero 2026</span><h4>Haunting Adeline</h4><p>H.D. Carlton</p><span class="td-badge drama">Dark Romance</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="sobre-turno-de-replica.html">Sobre Turno de Réplica</a><a href="#">Colaboraciones</a><a href="#">Contacto</a>
+    <a href="aviso-legal.html">Aviso Legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="terminos.html">Términos</a>
+    <a href="#" id="footer-cookie-settings">Configurar cookies</a>
+  </div>
+  <div class="footer-social">
+    <span>♛</span><span>TikTok</span><span>Discord</span><span>✉️</span><span>★</span>
+  </div>
+  <p class="footer-copy">© 2026 Turno de Réplica. Todos los derechos reservados.</p>
+</footer>
+
+<script src="home-tema.js"></script>
+<script src="cookie-consent.js"></script>
+<script src="ecos-loader.js"></script>
+</body>
+</html>

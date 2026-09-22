@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Turno de Réplica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home-estilos.css">
+<link rel="stylesheet" href="cookies-estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+      <img src="logo-dia.png" alt="Turno de Réplica" class="site-logo" id="site-logo">
+      <p>Revista Literaria • Comunidad • Historias</p>
+    </div>
+    <div class="icons">
+      <span>🔍<span class="sr-only">Buscar</span></span><span>✉️<span class="sr-only">Mensajes</span></span><span>👤<span class="sr-only">Mi cuenta</span></span>
+      <button id="theme-toggle" aria-pressed="false" title="Cambiar a modo noche">🌙</button>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+    <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>☰ Menú</summary>
+    <div class="mobile-menu-list">
+      <a href="index.html">Inicio</a><a href="la-trama-y-el-drama.html">Trama y Drama</a><a href="taller-de-escritura.html">Taller</a><a href="museo-literario.html">Museo</a>
+      <a href="ecos-de-papel.html">Club de Lectura</a><a href="la-plaza-del-marujeo.html">Plaza</a><a href="ficha-de-autor.html">Autores</a><a href="ficha-de-creador.html">Creadores</a><a href="el-corcho.html">El Corcho</a>
+    </div>
+  </details>
+</header>
+
+<section class="hero">
+  <svg class="deco-star star-1" viewBox="0 0 40 40"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--highlight)"/></svg>
+  <svg class="deco-star star-2" viewBox="0 0 40 40"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--interaction)"/></svg>
+  <svg class="deco-star star-3" viewBox="0 0 40 40"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--accent)"/></svg>
+  <div>
+    <h1 class="heading">Historias que<br>inspiran, <span class="deco-word">comunidad
+      <svg class="deco-underline" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M2 12 Q 50 2, 100 12 T 198 10" stroke="var(--accent)" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+    </span><br>que permanece.</h1>
+    <p class="deco-p-wrap">Revista, charlas, talleres y comunidad para lectores, autores y amantes de la literatura.
+      <svg class="deco-arrow" viewBox="0 0 60 50"><path d="M50 2 Q 15 10, 12 45" stroke="var(--secondary)" stroke-width="2.5" fill="none" stroke-linecap="round" marker-end="url(#arrowhead)"/><defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--secondary)"/></marker></defs></svg>
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Únete a la comunidad</button>
+    </div>
+  </div>
+
+  <!-- AVISO: los 6 enlaces de abajo están colocados a mano según ESTA imagen exacta.
+       Si se sube una portada-revista.png nueva, avisar a Claude antes para recalcular las posiciones. -->
+  <div class="portada-wrap">
+    <img src="images/uploads/portada-revista.png" alt="Portada Turno de Réplica — La Trama, El Drama, Museo Literario, Taller de Escritura, Ecos de Papel, El Corcho" class="portada-img">
+    <a class="portada-link" href="la-trama-y-el-drama.html#trama" style="top:32.0%;left:10%;width:80%;height:9.8%;" title="La Trama"></a>
+    <a class="portada-link" href="la-trama-y-el-drama.html#drama" style="top:41.8%;left:10%;width:80%;height:9.4%;" title="El Drama"></a>
+    <a class="portada-link" href="museo-literario.html" style="top:51.2%;left:10%;width:80%;height:9.4%;" title="Museo Literario"></a>
+    <a class="portada-link" href="taller-de-escritura.html" style="top:60.6%;left:10%;width:80%;height:9.6%;" title="Taller de Escritura"></a>
+    <a class="portada-link" href="ecos-de-papel.html" style="top:70.2%;left:10%;width:80%;height:9.5%;" title="Ecos de Papel"></a>
+    <a class="portada-link" href="el-corcho.html" style="top:79.7%;left:10%;width:80%;height:8.3%;" title="El Corcho"></a>
+  </div>
+
+  <style>
+    .portada-wrap{position:relative;max-width:320px;margin:0 auto;}
+    .portada-img{width:100%;display:block;border-radius:6px;box-shadow:0 25px 50px rgba(0,0,0,.25);}
+    .portada-link{position:absolute;display:block;}
+    .portada-link:hover{outline:2px dashed rgba(0,0,0,.25);border-radius:4px;}
+  </style>
+
+  <div class="taglist">
+    <span>✦ Literatura</span>
+    <span>✦ Comunidad</span>
+    <span>✦ Creadoras</span>
+    <span>✦ Historias reales</span>
+  </div>
+</section>
+
+<section class="cards cards-5">
+  <a class="card" href="la-trama-y-el-drama.html" style="text-decoration:none;color:inherit;"><div class="icon-circle" style="background:transparent;">
+    <img src="images/uploads/14.png" alt="La trama y el drama" class="icono-tarjeta">
+  </div><h3 class="heading">La trama y el drama</h3><p>El lugar perfecto para el salseo literario y los debates sin filtro.</p>→</a>
+  <a class="card" href="taller-de-escritura.html" style="text-decoration:none;color:inherit;"><div class="icon-circle" style="background:transparent;">
+    <img src="images/uploads/16.png" alt="Taller de escritura" class="icono-tarjeta">
+  </div><h3 class="heading">Taller de escritura</h3><p>Escribe, mejora y comparte tu proceso creativo.</p>→</a>
+  <a class="card" href="museo-literario.html" style="text-decoration:none;color:inherit;"><div class="icon-circle" style="background:transparent;">
+    <img src="images/uploads/15.png" alt="Museo literario" class="icono-tarjeta">
+  </div><h3 class="heading">Museo literario</h3><p>Un homenaje a la historia y las grandes voces.</p>→</a>
+  <a class="card" href="ecos-de-papel.html" style="text-decoration:none;color:inherit;"><div class="icon-circle" style="background:transparent;">
+    <img src="images/uploads/17.png" alt="Ecos de papel" class="icono-tarjeta">
+  </div><h3 class="heading">Ecos de papel</h3><p>Club de lectura en Discord. Lecturas, encuentros y más.</p>→</a>
+  <a class="card" href="la-plaza-del-marujeo.html" style="text-decoration:none;color:inherit;"><div class="icon-circle" style="background:transparent;">
+    <img src="images/uploads/18.png" alt="La plaza del marujeo" class="icono-tarjeta">
+  </div><h3 class="heading">La plaza del marujeo</h3><p>La comunidad. Opiniones, debates y todo lo que nos mueve.</p>→</a>
+</section>
+
+<section class="bottom">
+  <svg class="deco-star star-4" viewBox="0 0 40 40"><path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="var(--marker)"/></svg>
+  <div class="col">
+    <h4>Lo Último <span>Ver Todo</span></h4>
+    <ul>
+      <li><span class="date">12 JUN</span><a href="#">Entrevista a Nika R.: El arte de crear mundos que laten</a></li>
+      <li><span class="date">11 JUN</span><a href="#">¿Hay que avisar de los "chiles" en los libros?</a></li>
+      <li><span class="date">10 JUN</span><a href="#">5 libros que te romperán el alma (y te encantarán)</a></li>
+      <li><span class="date">09 JUN</span><a href="#">Recomendación: El club de las últimas páginas</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>Desde la plaza <span>Ver Todo</span></h4>
+    <ul>
+      <li>🙂 <a href="#">Lectura que me cambió</a> — hace 23 min · 💬 12</li>
+      <li>🙂 <a href="#">¿Qué libro leíste esta semana?</a> — hace 1 h · 💬 8</li>
+      <li>🙂 <a href="#">Recomienda tu novela favorita</a> — hace 3 h · 💬 23</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>Destacado</h4>
+    <div class="destacado">
+      <div class="book-cover">EL BOSQUE<br>DE LOS<br>RECUERDOS<span>✦</span></div>
+      <div>
+        <span class="eyebrow">El libro del mes</span>
+        <p class="heading book-title">El bosque de los recuerdos</p>
+        <p class="body-serif" style="font-size:13px;color:var(--ink-soft);margin:0 0 10px;">Una historia que te abraza y no te suelta.</p>
+        <a href="#" style="font-size:12px;font-weight:700;text-transform:uppercase;color:var(--accent);">Ver ficha →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-wrap">
+  <div class="newsletter">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <h4 style="margin:0;text-transform:uppercase;font-size:13px;letter-spacing:.05em;">Newsletter</h4>
+      <span class="r-badge">R</span>
+    </div>
+    <p class="body-serif" style="font-size:14px;color:var(--ink-soft);margin:10px 0 20px;">Historias, recomendaciones y un poquito de magia.</p>
+    <form onsubmit="return false;" style="display:flex;gap:0;">
+      <label for="newsletter-email-home" class="sr-only">Tu correo electrónico</label>
+      <input id="newsletter-email-home" type="email" placeholder="Tu correo electrónico" style="flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:4px 0 0 4px;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;">
+      <button class="btn-primary" style="border-radius:0 4px 4px 0;white-space:nowrap;">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="sobre-turno-de-replica.html">Sobre Turno de Réplica</a><a href="#">Colaboraciones</a><a href="#">Contacto</a>
+    <a href="aviso-legal.html">Aviso Legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="terminos.html">Términos</a>
+    <a href="#" id="footer-cookie-settings">Configurar cookies</a>
+  </div>
+  <div class="footer-social">
+    <span>♛</span><span>TikTok</span><span>Discord</span><span>✉️</span><span>★</span>
+  </div>
+  <p class="footer-copy">© 2026 Turno de Réplica. Todos los derechos reservados.</p>
+</footer>
+
+<script src="home-tema.js"></script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>
